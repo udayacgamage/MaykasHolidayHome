@@ -74,35 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  // ── Counter animation ──
-  const counters = document.querySelectorAll('[data-count]');
-  let counted = false;
 
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !counted) {
-        counted = true;
-        counters.forEach(el => {
-          const target = parseInt(el.dataset.count);
-          const duration = 1800;
-          const step = target / (duration / 16);
-          let current = 0;
-          (function tick() {
-            current += step;
-            if (current < target) {
-              el.textContent = Math.ceil(current) + '+';
-              requestAnimationFrame(tick);
-            } else {
-              el.textContent = target + '+';
-            }
-          })();
-        });
-      }
-    });
-  }, { threshold: 0.5 });
-
-  const trustSection = document.querySelector('.hero-trust');
-  if (trustSection) counterObserver.observe(trustSection);
 
   // ── Gallery Lightbox ──
   const lightbox = document.getElementById('lightbox');

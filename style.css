@@ -432,36 +432,30 @@ h1, h2, h3, h4, h5 {
   to { opacity: 1; transform: translateY(0); }
 }
 
-.hero-trust {
+.hero-badges {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 24px;
-  margin-top: 48px;
-  padding-top: 32px;
+  gap: 20px;
+  margin-top: 40px;
+  padding-top: 28px;
   border-top: 1px solid rgba(255,255,255,0.15);
   animation: fadeInUp 0.8s ease 0.8s both;
 }
-.trust-item {
+.badge-item {
   display: flex;
-  flex-direction: column;
-}
-.trust-number {
-  font-family: 'Merriweather', serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--white);
-}
-.trust-label {
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.6);
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.84rem;
+  color: rgba(255,255,255,0.85);
   font-weight: 500;
+  letter-spacing: 0.2px;
 }
-.trust-divider {
-  width: 1px;
-  height: 40px;
-  background: rgba(255,255,255,0.15);
+.badge-item svg {
+  width: 18px;
+  height: 18px;
+  color: var(--sand);
+  flex-shrink: 0;
 }
 
 /* ── Buttons ── */
@@ -667,19 +661,24 @@ h1, h2, h3, h4, h5 {
   color: var(--white);
   box-shadow: var(--shadow-md);
   z-index: 2;
+  text-align: center;
+  padding: 8px;
 }
 .media-accent .accent-number {
-  font-family: 'Merriweather', serif;
-  font-size: 2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
   font-weight: 700;
-  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
 }
 .media-accent .accent-text {
-  font-size: 0.72rem;
+  font-size: 0.65rem;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-weight: 500;
+  letter-spacing: 1px;
+  font-weight: 600;
   margin-top: 4px;
+  opacity: 0.9;
 }
 
 .accommodation-info h2 {
@@ -724,9 +723,13 @@ h1, h2, h3, h4, h5 {
   justify-content: center;
   background: var(--white);
   border-radius: var(--radius);
-  font-size: 1.1rem;
   flex-shrink: 0;
   box-shadow: var(--shadow-sm);
+}
+.amenity-item .amenity-icon svg {
+  width: 18px;
+  height: 18px;
+  color: var(--emerald);
 }
 
 @media (max-width: 768px) {
@@ -741,7 +744,7 @@ h1, h2, h3, h4, h5 {
     width: 90px;
     height: 90px;
   }
-  .media-accent .accent-number { font-size: 1.5rem; }
+  .media-accent .accent-number { font-size: 0.9rem; }
   .amenities-grid { grid-template-columns: 1fr; }
 }
 
@@ -773,8 +776,12 @@ h1, h2, h3, h4, h5 {
   justify-content: center;
   background: rgba(255,255,255,0.08);
   border-radius: var(--radius);
-  font-size: 1.4rem;
   margin-bottom: 16px;
+}
+.feature-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--sand-light);
 }
 .feature-card h4 {
   font-family: 'Inter', sans-serif;
@@ -914,83 +921,64 @@ h1, h2, h3, h4, h5 {
 .lightbox-next { right: 24px; }
 
 /* ══════════════════════════════════════════════
-   TESTIMONIALS
+   GUEST REVIEWS & BOOKING TRUST
    ══════════════════════════════════════════════ */
-.testimonials-grid {
+.trust-cards-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  max-width: 900px;
+  margin: 0 auto;
 }
-.testimonial-card {
+.trust-card {
   background: var(--white);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
-  padding: 32px;
+  padding: 36px 32px;
   transition: all var(--transition);
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
 }
-.testimonial-card:hover {
+.trust-card:hover {
   box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
   border-color: transparent;
 }
-.testimonial-card::before {
-  content: '"';
-  font-family: 'Merriweather', serif;
-  font-size: 4rem;
-  color: var(--emerald);
-  opacity: 0.15;
-  position: absolute;
-  top: 16px;
-  right: 24px;
-  line-height: 1;
-}
-.testimonial-rating {
-  display: flex;
-  gap: 3px;
-  margin-bottom: 16px;
-}
-.testimonial-rating .star {
-  color: #f59e0b;
-  font-size: 0.9rem;
-}
-.testimonial-text {
-  color: var(--text-body);
-  font-size: 0.95rem;
-  line-height: 1.75;
-  margin-bottom: 20px;
-}
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding-top: 16px;
-  border-top: 1px solid var(--border-light);
-}
-.testimonial-avatar {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: var(--navy);
+.trust-card-icon {
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--white);
+  border-radius: var(--radius);
+  background: rgba(26,122,92,0.08);
+  margin-bottom: 20px;
+}
+.trust-card-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--emerald);
+}
+.trust-card h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.25rem;
   font-weight: 700;
-  font-size: 0.85rem;
-  flex-shrink: 0;
+  margin-bottom: 12px;
 }
-.testimonial-name {
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: var(--text-dark);
+.trust-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  flex-grow: 1;
 }
-.testimonial-origin {
-  font-size: 0.78rem;
-  color: var(--text-light);
+.trust-card .btn {
+  align-self: flex-start;
 }
 
-@media (max-width: 992px) {
-  .testimonials-grid { grid-template-columns: 1fr; }
+@media (max-width: 768px) {
+  .trust-cards-grid { grid-template-columns: 1fr; }
 }
 
 /* ══════════════════════════════════════════════
@@ -1034,9 +1022,13 @@ h1, h2, h3, h4, h5 {
   justify-content: center;
   background: var(--white);
   border-radius: var(--radius);
-  font-size: 1.15rem;
   flex-shrink: 0;
   box-shadow: var(--shadow-sm);
+}
+.contact-card-icon svg {
+  width: 20px;
+  height: 20px;
+  color: var(--emerald);
 }
 .contact-card-text {
   min-width: 0;
