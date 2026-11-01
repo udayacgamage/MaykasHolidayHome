@@ -3,233 +3,527 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mayka's Holiday Homes & Safari Tours — Thanamalwila</title>
+  <title>Mayka's Holiday Homes & Safari Tours — Thanamalwila, Sri Lanka</title>
+  <meta name="description" content="Experience luxury holiday homes and unforgettable safari tours in Thanamalwila, Sri Lanka. Yala, Kumana & Lunugamwehera safaris. Book your adventure today." />
+  <meta name="keywords" content="Sri Lanka safari, Yala safari, Kumana bird watching, Thanamalwila holiday home, wildlife tours, Sri Lanka accommodation" />
+  <meta property="og:title" content="Mayka's Holiday Homes & Safari Tours" />
+  <meta property="og:description" content="Family-owned retreats & guided safaris in Thanamalwila — comfort close to the wild." />
+  <meta property="og:type" content="website" />
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="style.css">
-
+  <!-- Fonts are loaded via CSS @import -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Mayka's Holiday Homes</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-      <div class="collapse navbar-collapse" id="navmenu">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <li class="nav-item ms-2 mt-2 mt-lg-0"><a class="btn cta-btn" href="https://www.booking.com/Share-mBfqux">Book Now</a></li>
-        </ul>
-      </div>
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="loader-ring"></div>
+    <span class="loader-text">Mayka's</span>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#home" class="nav-logo">Mayka's <span>Holiday</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active" data-nav>Home</a></li>
+        <li><a href="#services" data-nav>Tours</a></li>
+        <li><a href="#accommodation" data-nav>Stay</a></li>
+        <li><a href="#about" data-nav>About</a></li>
+        <li><a href="#gallery" data-nav>Gallery</a></li>
+        <li><a href="#testimonials" data-nav>Reviews</a></li>
+        <li><a href="#contact" data-nav>Contact</a></li>
+        <li><a href="https://www.booking.com/Share-mBfqux" class="nav-cta" target="_blank" rel="noreferrer">Book Now</a></li>
+      </ul>
     </div>
   </nav>
 
   <!-- HERO -->
   <header id="home" class="hero">
-    <div class="container text-center">
-      <h1>Welcome to Mayka's Holiday Homes & Safari Tours</h1>
-      <p class="lead my-3">Family-owned retreats & guided safaris in Thanamalwila — comfort close to the wild.</p>
-      <div class="d-flex justify-content-center gap-3">
-        <a class="btn cta-btn btn-lg" href="#services">Explore Services</a>
-        <a class="btn btn-outline-dark btn-lg" href="#gallery">View Gallery</a>
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <canvas id="particles-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Thanamalwila, Sri Lanka
       </div>
+      <h1>Welcome to Mayka's <em>Holiday Homes</em> & Safari Tours</h1>
+      <p class="hero-desc">Family-owned retreats & guided safaris — where comfort meets the untamed beauty of Sri Lanka's wilderness.</p>
+      <div class="hero-buttons">
+        <a href="#services" class="btn-primary-gold">
+          Explore Tours
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <a href="#gallery" class="btn-outline-light-custom">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          View Gallery
+        </a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse"></div>
+      <span>Scroll</span>
     </div>
   </header>
 
-  <!-- SERVICES -->
-  <section id="services" class="container my-5">
-    <h2 class="text-center mb-4">Our Tours & Experiences</h2>
-    <div class="row g-4">
-
-      <!-- Kumana safari-->
-      <div class="col-md-4">
-        <div class="p-4 card-elegant h-100">
-          <picture>
-            <img loading="lazy" src="image/kumana.jpg" alt="Bird" class="img-fluid rounded mb-3">
-          </picture>
-          <h5 class="fw-bold">Bird Watching Safari at Kumana</h5>
-          <p class="text-muted">Discover over 200 species of birds in the lush wetlands and forests. Perfect for nature enthusiasts and photographers alike.</p>
-          <ul class="text-muted small">
-            <li>Early Morning Tour (3-4 hours)</li>
-            <li>Binoculars Provided</li>
-            <li>Bird Identification Guide</li>
-            <li>Nature Trail Walking</li>
-            <li>Breakfast Included</li>
-          </ul>
-          <p class="mt-auto fw-semibold">From <strong>$45</strong> / person</p>
-          <a href="#booking" class="btn cta-btn">Book Bird Tour</a>
-        </div>
-      </div>
-
-      <!-- Yala safari-->
-      <div class="col-md-4">
-        <div class="p-4 card-elegant h-100">
-          <picture>
-            <img loading="lazy" src="image/yala.jpg" alt="tiger" class="img-fluid rounded mb-3">
-          </picture>
-          <h5 class="fw-bold">Yala National Park Safari</h5>
-          <p class="text-muted">Witness leopards, elephants, and diverse wildlife in their natural habitat. Yala is one of the best places in the world to observe leopards in the wild.</p>
-          <ul class="text-muted small">
-            <li>Half Day / Full Day Options</li>
-            <li>Private 4x4 Jeep Safari</li>
-            <li>Expert Wildlife Guide</li>
-            <li>Photography Opportunities</li>
-            <li>Water &amp; Snacks Included</li>
-          </ul>
-          <p class="mt-auto fw-semibold">From <strong>$50</strong> / person</p>
-          <a href="#booking" class="btn cta-btn">Book Yala Safari</a>
-        </div>
-      </div>
-
-      <!-- Elephant Tour -->
-      <div class="col-md-4">
-        <div class="p-4 card-elegant h-100">
-          <picture>
-            <img loading="lazy" src="image/elephant.jpg" alt="Elephant" class="img-fluid rounded mb-3">
-          </picture>
-          <h5 class="fw-bold">Elephant Gathering Tour Lunugamwehera park</h5>
-          <p class="text-muted">Experience the majestic elephant herds at their natural watering holes. Witness one of nature's most spectacular gatherings.</p>
-          <ul class="text-muted small">
-            <li>Afternoon Safari (4-5 hours)</li>
-            <li>Reservoir Visit</li>
-            <li>Stunning Sunset Views</li>
-            <li>Photography Guidance</li>
-            <li>Safety Equipment Provided</li>
-          </ul>
-          <p class="mt-auto fw-semibold">From <strong>$55</strong> / person</p>
-          <a href="#booking" class="btn cta-btn">Book Elephant Tour</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  
-
-  <!-- HOLIDAY HOME ROOM -->
-  <section id="about" class="bg-white py-5">
+  <!-- STATS BAR -->
+  <div class="stats-bar">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6">
-          
-
-          <h2 class="mt-3 fw-bold">Your Home Away From Home</h2>
-          <p class="text-bold">After a day of adventure, retreat to the comfort of our small, charming hotel. Each room is designed to provide a peaceful and relaxing environment, ensuring a restful stay.</p>
-
-          <ul class="text-bold mb-4">
-            <li>Comfortable and elegantly furnished guest rooms</li>
-            <li>Complimentary high-speed Wi-Fi</li>
-            <li>On-site dining options offering a variety of cuisine</li>
-          </ul>
-
-          <div class="mb-3">
-            <a href="https://www.booking.com/Share-mBfqux" class="btn cta-btn">Book a Room</a>
-          </div>
-
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="stat-number" data-count="500">0</div>
+          <div class="stat-label">Happy Guests</div>
         </div>
-        <div class="col-md-6">
-          <picture>
-            <img loading="lazy" src="image/hotel.jpeg" alt="family home" class="img-fluid rounded" style="max-width:420px;">
-          </picture>
+        <div class="stat-item reveal reveal-delay-1">
+          <div class="stat-number" data-count="3">0</div>
+          <div class="stat-label">Safari Parks</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+          <div class="stat-number" data-count="8">0</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+          <div class="stat-number" data-count="5">0</div>
+          <div class="stat-label">Star Rated</div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- About-->
-<section id="about-details" class="container my-5">
-  <div class="row">
-    <div class="col-lg-8 mx-auto text-center">
-      <h3 class="mb-4">About Mayka's Holiday Homes</h3>
-      <p class="text-bold mb-4">
-        Welcome to Mayka's Holiday Homes &amp; Safari Tours – Thanamalwila. A family-owned business combining the thrill of the wild with the comfort of home.
-      </p>
-      
-      <ul class="list-unstyled text-center">
-        <li class="mb-2"><i class="bi bi-binoculars me-2"></i>Adventure Safari Tours</li>
-        <li class="mb-2"><i class="bi bi-house-door me-2"></i>Comfortable Holiday Homes</li>
-        <li class="mb-2"><i class="bi bi-cup-straw me-2"></i>Friendly Café Experience</li>
-        <li class="mb-2"><i class="bi bi-images me-2"></i>Stunning Photo Gallery</li>
-        <li class="mb-2"><i class="bi bi-chat-dots me-2"></i>Easy Contact &amp; Booking</li>
-      </ul>
     </div>
   </div>
-</section>
 
-  <!-- GALLERY -->
-  <section id="gallery" class="container my-5">
-    <h2 class="text-center mb-4">Gallery</h2>
-    <div class="row g-3 gallery-grid">
-      <div class="col-6 col-md-3">
-        <img loading="lazy" src="image/group.jpeg" alt="group" >
-      </div>
-      <div class="col-6 col-md-3">
-        <img loading="lazy" src="image/food.jpeg" alt="food" >
-      </div>
-      <div class="col-6 col-md-3">
-        <img loading="lazy" src="image/jeep.jpeg" alt="jeep" >
-      </div>
-      <div class="col-6 col-md-3">
-        <img loading="lazy" src="image/cafe.jpeg" alt="cafe" >
-      </div>
-    </div>
-    </section>
+  <!-- SERVICES / TOURS -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">Our Safari Experiences</h2>
+      <div class="accent-line reveal"></div>
+      <p class="section-subtitle reveal">Curated wildlife adventures led by expert local guides — discover Sri Lanka's most breathtaking national parks.</p>
 
-  <!-- CONTACT-->
-  <section id="contact" class="container my-5">
-    <div class="row">
-      <div class="col-lg-6 mb-4 mt-lg-4">
-        <h4>Contact & Booking</h4>
-        <p class="text-muted">For bookings and enquiries, contact us directly via phone or WhatsApp. We reply quickly to confirm availability and tailor your stay or safari.</p>
+      <div class="services-grid">
 
-        <div class="card card-elegant p-3">
-          <p class="mb-1"><strong>Phone:</strong> <a href="tel:+94 71 944 7567">+94 71 944 75677</a></p>
-          <p class="mb-1"><strong>Email:</strong> <a href="mailto:maykaholidayhome@gmail.com">maykaholidayhome@gmail.com</a></p>
-          <p class="mb-0"><strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=61561930016886" target="_blank" rel="noreferrer">Visit our Facebook page</a></p>
+        <!-- Kumana Safari -->
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-card-img">
+            <img loading="lazy" src="image/kumana.jpg" alt="Bird watching at Kumana National Park" />
+            <span class="price-tag">From $45</span>
+          </div>
+          <div class="service-card-body">
+            <h3>Bird Watching Safari at Kumana</h3>
+            <p>Discover over 200 species of birds in lush wetlands and forests. Perfect for nature enthusiasts and photographers.</p>
+            <ul class="service-features">
+              <li>Early Morning Tour (3–4 hours)</li>
+              <li>Binoculars & ID Guide Provided</li>
+              <li>Nature Trail Walking</li>
+              <li>Breakfast Included</li>
+            </ul>
+            <a href="#contact" class="btn-primary-gold">Book Bird Tour</a>
+          </div>
         </div>
-      </div>
 
-      <div class="col-lg-6" id="booking">
-        <h4>Send an Enquiry</h4>
-        <form class="card card-elegant p-3" id="bookingForm">
-          <div class="mb-3">
-            <label class="form-label">Your Name</label>
-            <input class="form-control" type="text" required placeholder="Full name">
+        <!-- Yala Safari -->
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-card-img">
+            <img loading="lazy" src="image/yala.jpg" alt="Leopard at Yala National Park" />
+            <span class="price-tag">From $50</span>
           </div>
-          <div class="mb-3">
-            <label class="form-label">Email</label>
-            <input class="form-control" type="email" required placeholder="you@example.com">
+          <div class="service-card-body">
+            <h3>Yala National Park Safari</h3>
+            <p>Witness leopards, elephants, and diverse wildlife in their natural habitat — one of the world's best leopard spotting locations.</p>
+            <ul class="service-features">
+              <li>Half Day / Full Day Options</li>
+              <li>Private 4×4 Jeep Safari</li>
+              <li>Expert Wildlife Guide</li>
+              <li>Water & Snacks Included</li>
+            </ul>
+            <a href="#contact" class="btn-primary-gold">Book Yala Safari</a>
           </div>
-          <div class="mb-3">
-            <label class="form-label">Message / Request</label>
-            <textarea class="form-control" rows="4" placeholder="Tell us about your dates, guests, or questions"></textarea>
+        </div>
+
+        <!-- Elephant Tour -->
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-card-img">
+            <img loading="lazy" src="image/elephant.jpg" alt="Elephants at Lunugamwehera National Park" />
+            <span class="price-tag">From $55</span>
           </div>
-          <div class="d-flex justify-content-end">
-            <button type="submit" class="btn cta-btn">Send Enquiry</button>
+          <div class="service-card-body">
+            <h3>Elephant Gathering — Lunugamwehera</h3>
+            <p>Experience majestic elephant herds at natural watering holes. Witness one of nature's most spectacular gatherings.</p>
+            <ul class="service-features">
+              <li>Afternoon Safari (4–5 hours)</li>
+              <li>Reservoir & Sunset Views</li>
+              <li>Photography Guidance</li>
+              <li>Safety Equipment Provided</li>
+            </ul>
+            <a href="#contact" class="btn-primary-gold">Book Elephant Tour</a>
           </div>
-        </form>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!--FOOTER -->
-  <footer class="py-4 mt-5">
-    <div class="container text-center">
-      <p class="mb-0">&copy; 2025 Mayka's Holiday Homes & Safari Tours — Thanamalwila,Sri Lanka. Powered By Udaya C Gamage</p>
+  <!-- ACCOMMODATION -->
+  <section id="accommodation" class="section section-dark">
+    <div class="container">
+      <div class="accommodation-grid">
+        <div class="accommodation-img reveal">
+          <img loading="lazy" src="image/hotel.jpeg" alt="Mayka's Holiday Home rooms" />
+        </div>
+        <div class="accommodation-content reveal reveal-delay-2">
+          <h2>Your Home Away From Home</h2>
+          <p>After a day of adventure, retreat to the comfort of our charming holiday home. Each room is thoughtfully designed for a peaceful and rejuvenating stay close to nature.</p>
+          <ul class="amenity-list">
+            <li>
+              <span class="amenity-icon">🛏️</span>
+              Elegantly Furnished Rooms
+            </li>
+            <li>
+              <span class="amenity-icon">📶</span>
+              High-Speed Wi-Fi
+            </li>
+            <li>
+              <span class="amenity-icon">🍽️</span>
+              On-Site Dining
+            </li>
+            <li>
+              <span class="amenity-icon">🚗</span>
+              Free Parking
+            </li>
+            <li>
+              <span class="amenity-icon">🌿</span>
+              Garden Views
+            </li>
+            <li>
+              <span class="amenity-icon">🔒</span>
+              24/7 Security
+            </li>
+          </ul>
+          <a href="https://www.booking.com/Share-mBfqux" class="btn-primary-gold" target="_blank" rel="noreferrer">
+            Book a Room
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / WHY US -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">Why Choose Mayka's</h2>
+      <div class="accent-line reveal"></div>
+      <p class="section-subtitle reveal">A family-owned business combining the thrill of the wild with the comfort of home — since 2017.</p>
+
+      <div class="features-grid">
+        <div class="feature-card reveal reveal-delay-1">
+          <div class="feature-icon">🌍</div>
+          <h4>Expert Local Guides</h4>
+          <p>Our guides are born and raised in the region, with deep knowledge of every trail, watering hole, and hidden gem.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-2">
+          <div class="feature-icon">🐆</div>
+          <h4>Premium Safari Tours</h4>
+          <p>Private 4×4 jeep safaris to Yala, Kumana, and Lunugamwehera — tailored to your pace and interests.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-3">
+          <div class="feature-icon">🏡</div>
+          <h4>Comfortable Stays</h4>
+          <p>Clean, cozy rooms with modern amenities nestled in the heart of Thanamalwila's serene countryside.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-1">
+          <div class="feature-icon">☕</div>
+          <h4>Friendly Café</h4>
+          <p>Start your morning with fresh Sri Lankan tea and local cuisine at our on-site café before your safari.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-2">
+          <div class="feature-icon">📸</div>
+          <h4>Photography Tours</h4>
+          <p>Specialized photo-focused safaris to capture wildlife in golden-hour light — guidance included.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-3">
+          <div class="feature-icon">💬</div>
+          <h4>Instant Booking</h4>
+          <p>Reach us via WhatsApp, phone, or email for fast confirmations and personalized trip planning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title reveal">Gallery</h2>
+      <div class="accent-line reveal"></div>
+      <p class="section-subtitle reveal">Moments captured from our safaris, stays, and the stunning Sri Lankan wilderness.</p>
+
+      <div class="gallery-grid reveal">
+        <div class="gallery-item" data-lightbox>
+          <img loading="lazy" src="image/group.jpeg" alt="Happy safari group" />
+          <div class="gallery-item-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+          </div>
+        </div>
+        <div class="gallery-item" data-lightbox>
+          <img loading="lazy" src="image/food.jpeg" alt="Delicious local cuisine" />
+          <div class="gallery-item-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+          </div>
+        </div>
+        <div class="gallery-item" data-lightbox>
+          <img loading="lazy" src="image/jeep.jpeg" alt="Safari jeep adventure" />
+          <div class="gallery-item-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+          </div>
+        </div>
+        <div class="gallery-item" data-lightbox>
+          <img loading="lazy" src="image/cafe.jpeg" alt="Cozy café experience" />
+          <div class="gallery-item-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+          </div>
+        </div>
+        <div class="gallery-item" data-lightbox>
+          <img loading="lazy" src="image/yala.jpg" alt="Yala wildlife" />
+          <div class="gallery-item-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+          </div>
+        </div>
+        <div class="gallery-item" data-lightbox>
+          <img loading="lazy" src="image/kumana.jpg" alt="Kumana birds" />
+          <div class="gallery-item-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+          </div>
+        </div>
+        <div class="gallery-item" data-lightbox>
+          <img loading="lazy" src="image/elephant.jpg" alt="Elephant gathering" />
+          <div class="gallery-item-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+          </div>
+        </div>
+        <div class="gallery-item" data-lightbox>
+          <img loading="lazy" src="image/hotel.jpeg" alt="Holiday home" />
+          <div class="gallery-item-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">‹</button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">›</button>
+    <img src="" alt="Gallery preview" id="lightboxImg" />
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">What Our Guests Say</h2>
+      <div class="accent-line reveal"></div>
+      <p class="section-subtitle reveal">Real experiences from travelers who chose Mayka's for their Sri Lankan adventure.</p>
+
+      <div class="testimonials-track reveal">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+          <p class="testimonial-text">"An incredible experience! The Yala safari was beyond our expectations. The guide spotted a leopard within 30 minutes. The rooms were clean, cozy, and the food was amazing."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JM</div>
+            <div>
+              <div class="testimonial-name">James Mitchell</div>
+              <div class="testimonial-origin">London, United Kingdom</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+          <p class="testimonial-text">"The bird watching tour at Kumana was a dream come true for this ornithologist. Over 50 species spotted in one morning! Mayka's hospitality made it unforgettable."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SK</div>
+            <div>
+              <div class="testimonial-name">Sophie Keller</div>
+              <div class="testimonial-origin">Munich, Germany</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+          <p class="testimonial-text">"We came for the elephants and stayed for the warmth. The family runs everything with such genuine care. Best holiday we've had in years. Highly recommend!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RP</div>
+            <div>
+              <div class="testimonial-name">Raj Patel</div>
+              <div class="testimonial-origin">Mumbai, India</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title reveal">Get In Touch</h2>
+      <div class="accent-line reveal"></div>
+      <p class="section-subtitle reveal">Ready to plan your adventure? Reach out and we'll tailor a perfect experience for you.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Contact & Booking</h3>
+          <p>For bookings and enquiries, contact us directly via phone or WhatsApp. We reply quickly to confirm availability and tailor your stay or safari.</p>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📞</div>
+            <div class="contact-detail-text">
+              <strong>Phone</strong>
+              <a href="tel:+94719447567">+94 71 944 7567</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">✉️</div>
+            <div class="contact-detail-text">
+              <strong>Email</strong>
+              <a href="mailto:maykaholidayhome@gmail.com">maykaholidayhome@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📍</div>
+            <div class="contact-detail-text">
+              <strong>Location</strong>
+              <span>Thanamalwila, Sri Lanka</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📘</div>
+            <div class="contact-detail-text">
+              <strong>Facebook</strong>
+              <a href="https://www.facebook.com/profile.php?id=61561930016886" target="_blank" rel="noreferrer">Mayka's Holiday Homes</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-2">
+          <form class="contact-form" id="bookingForm">
+            <h3>Send an Enquiry</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="enquiry-name">Your Name</label>
+                <input type="text" id="enquiry-name" required placeholder="Full name" />
+              </div>
+              <div class="form-group">
+                <label for="enquiry-email">Email Address</label>
+                <input type="email" id="enquiry-email" required placeholder="you@example.com" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="enquiry-tour">Interested In</label>
+              <select id="enquiry-tour">
+                <option value="">Select a tour or stay</option>
+                <option value="yala">Yala National Park Safari</option>
+                <option value="kumana">Kumana Bird Watching Safari</option>
+                <option value="elephant">Elephant Gathering Tour</option>
+                <option value="room">Holiday Home Booking</option>
+                <option value="custom">Custom Package</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="enquiry-date">Preferred Date</label>
+                <input type="date" id="enquiry-date" />
+              </div>
+              <div class="form-group">
+                <label for="enquiry-guests">Number of Guests</label>
+                <input type="number" id="enquiry-guests" min="1" max="20" placeholder="2" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="enquiry-message">Message / Special Requests</label>
+              <textarea id="enquiry-message" rows="4" placeholder="Tell us about your dates, preferences, or questions..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary-gold form-submit">
+              Send Enquiry
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+            </button>
+            <div class="form-success" id="formSuccess">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <h4>Enquiry Sent!</h4>
+              <p>Thank you! We'll get back to you within 24 hours.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Mayka's <span>Holiday</span></h3>
+          <p>A family-owned business combining the thrill of the wild with the comfort of home. Based in Thanamalwila, the gateway to Sri Lanka's most spectacular national parks.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/profile.php?id=61561930016886" target="_blank" rel="noreferrer" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://wa.me/94719447567" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <a href="mailto:maykaholidayhome@gmail.com" aria-label="Email">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Safari Tours</a></li>
+            <li><a href="#accommodation">Accommodation</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Our Tours</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Yala Safari</a></li>
+            <li><a href="#services">Kumana Bird Tour</a></li>
+            <li><a href="#services">Elephant Gathering</a></li>
+            <li><a href="#services">Photography Tour</a></li>
+            <li><a href="#services">Custom Package</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact Info</h4>
+          <ul class="footer-links">
+            <li>📞 +94 71 944 7567</li>
+            <li>✉️ maykaholidayhome@gmail.com</li>
+            <li>📍 Thanamalwila, Sri Lanka</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Mayka's Holiday Homes & Safari Tours — Thanamalwila, Sri Lanka.</p>
+        <p>Powered By Udaya C Gamage</p>
+      </div>
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a href="https://wa.me/94719447567" class="whatsapp-float" target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+  </button>
+
   <script src="script.js"></script>
 </body>
 </html>
