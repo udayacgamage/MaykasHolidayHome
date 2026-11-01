@@ -931,6 +931,151 @@ h1, h2, h3, h4, h5 {
 /* ══════════════════════════════════════════════
    GUEST REVIEWS & BOOKING TRUST
    ══════════════════════════════════════════════ */
+/* ── Reviews Summary Strip ── */
+.reviews-summary-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+  padding: 24px 32px;
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+.summary-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.summary-score {
+  font-family: 'Merriweather', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1;
+}
+.summary-score span {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+.summary-label strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+}
+.summary-label small {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+.summary-divider {
+  width: 1px;
+  height: 44px;
+  background: var(--border-light);
+}
+
+/* ── Original Reviews Grid ── */
+.original-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.original-review-card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition);
+  position: relative;
+}
+.original-review-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+  border-color: transparent;
+}
+.review-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.platform-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius);
+  letter-spacing: 0.3px;
+}
+.platform-tag.google {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+.platform-tag.booking {
+  background: #003580;
+  color: #ffffff;
+}
+.platform-tag svg {
+  width: 14px;
+  height: 14px;
+}
+.review-score-tag {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--emerald);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.review-score-tag.stars {
+  color: #f59e0b;
+}
+.original-review-text {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text-body);
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+.original-review-author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-light);
+  font-size: 0.85rem;
+}
+.author-meta strong {
+  display: block;
+  color: var(--text-dark);
+}
+.author-meta small {
+  color: var(--text-muted);
+}
+.review-source-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--emerald);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.review-source-link:hover {
+  color: var(--emerald-dark);
+  text-decoration: underline;
+}
+
 .trust-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -989,6 +1134,11 @@ h1, h2, h3, h4, h5 {
 
 @media (max-width: 992px) {
   .trust-cards-grid { grid-template-columns: 1fr; }
+  .original-reviews-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .summary-divider { display: none; }
+  .reviews-summary-bar { flex-direction: column; align-items: flex-start; gap: 20px; }
 }
 
 /* ══════════════════════════════════════════════
