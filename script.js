@@ -162,4 +162,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ── WhatsApp Direct Enquiry Handler ──
+  const whatsappBtn = document.getElementById('enquiryWhatsappBtn');
+  if (whatsappBtn) {
+    whatsappBtn.addEventListener('click', () => {
+      const nameInput = document.getElementById('enquiry-name');
+      const name = nameInput ? nameInput.value.trim() : '';
+      const emailInput = document.getElementById('enquiry-email');
+      const email = emailInput ? emailInput.value.trim() : '';
+      const tourSelect = document.getElementById('enquiry-tour');
+      const tour = (tourSelect && tourSelect.selectedIndex >= 0) ? tourSelect.options[tourSelect.selectedIndex].text : '';
+      const dateInput = document.getElementById('enquiry-date');
+      const date = dateInput ? dateInput.value : '';
+      const guestsInput = document.getElementById('enquiry-guests');
+      const guests = guestsInput ? guestsInput.value : '';
+      const msgInput = document.getElementById('enquiry-message');
+      const msg = msgInput ? msgInput.value.trim() : '';
+
+      if (!name) {
+        alert('Please enter your full name first.');
+        if (nameInput) nameInput.focus();
+        return;
+      }
+
+      let text = `*New Booking Enquiry — Mayka's Holiday Homes*\n\n`;
+      text += `👤 *Name:* ${name}\n`;
+      if (email) text += `📧 *Email:* ${email}\n`;
+      if (tour && tour !== 'Select an option') text += `🏡 *Service/Tour:* ${tour}\n`;
+      if (date) text += `📅 *Preferred Date:* ${date}\n`;
+      if (guests) text += `👥 *Number of Guests:* ${guests}\n`;
+      if (msg) text += `💬 *Message:* ${msg}\n\n`;
+      text += `_Sent via Mayka's Holiday Homes official website_`;
+
+      const url = `https://wa.me/94719447567?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+    });
+  }
+
 });

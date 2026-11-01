@@ -1029,6 +1029,123 @@ h1, h2, h3, h4, h5 {
   .dining-perks-list { grid-template-columns: 1fr; }
 }
 
+/* Detailed Café Menu Board */
+.dining-menu-board {
+  margin-top: 56px;
+  padding-top: 48px;
+  border-top: 1px solid var(--border-light);
+}
+.menu-board-header {
+  text-align: center;
+  max-width: 660px;
+  margin: 0 auto 36px;
+}
+.menu-board-title {
+  font-family: 'Merriweather', serif;
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 8px 0 10px;
+}
+.menu-board-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+.menu-columns-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.menu-category-card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition);
+}
+.menu-category-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--emerald-light);
+  transform: translateY(-3px);
+}
+.menu-category-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-light);
+}
+.menu-cat-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+.menu-category-header h4 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 2px;
+}
+.menu-cat-sub {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.menu-items-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.menu-item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+.menu-item-name {
+  font-weight: 600;
+  font-size: 0.86rem;
+  color: var(--text-dark);
+  line-height: 1.3;
+}
+.menu-item-price {
+  font-weight: 700;
+  font-size: 0.86rem;
+  color: var(--emerald);
+  white-space: nowrap;
+}
+.menu-item-price small {
+  font-weight: 500;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+.menu-item-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .menu-columns-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+}
+@media (max-width: 580px) {
+  .menu-columns-grid { grid-template-columns: 1fr; }
+}
+
 /* ══════════════════════════════════════════════
    WHY US / ABOUT
    ══════════════════════════════════════════════ */
@@ -1082,6 +1199,159 @@ h1, h2, h3, h4, h5 {
 }
 @media (max-width: 600px) {
   .features-grid { grid-template-columns: 1fr; }
+}
+
+/* ══════════════════════════════════════════════
+   NEARBY ATTRACTIONS & DAY TRIPS
+   ══════════════════════════════════════════════ */
+.attractions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.attraction-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition);
+}
+.attraction-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--emerald-light);
+}
+.attraction-img-wrap {
+  position: relative;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+}
+.attraction-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.attraction-card:hover .attraction-img-wrap img {
+  transform: scale(1.05);
+}
+.attraction-dist-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(15,28,47,0.85);
+  backdrop-filter: blur(4px);
+  color: var(--white);
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.attraction-tag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--emerald);
+  color: var(--white);
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.attraction-body {
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.attraction-body h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+.attraction-body p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+.attraction-perks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+.attraction-perks li {
+  font-size: 0.8rem;
+  color: var(--text-body);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.attraction-perks li::before {
+  content: '•';
+  color: var(--emerald);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.attraction-body .btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/* Island Transfers Banner */
+.transfer-cta-box {
+  background: var(--navy);
+  color: var(--white);
+  border-radius: var(--radius-md);
+  padding: 36px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.transfer-cta-content .section-label {
+  color: var(--sand-light);
+  margin-bottom: 4px;
+}
+.transfer-cta-content h3 {
+  font-family: 'Merriweather', serif;
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  font-weight: 700;
+  color: var(--white);
+  margin: 6px 0 8px;
+}
+.transfer-cta-content p {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 640px;
+}
+.transfer-cta-box .btn {
+  flex-shrink: 0;
+}
+
+@media (max-width: 992px) {
+  .attractions-grid { grid-template-columns: 1fr; max-width: 600px; margin-left: auto; margin-right: auto; }
+  .transfer-cta-box { flex-direction: column; align-items: flex-start; gap: 20px; padding: 28px; }
 }
 
 /* ══════════════════════════════════════════════
@@ -1544,12 +1814,43 @@ h1, h2, h3, h4, h5 {
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
+.form-actions-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 10px;
+}
+.btn-whatsapp {
+  background: #25d366;
+  color: var(--white);
+  border: 1px solid #20ba5a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px !important;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.9rem !important;
+  cursor: pointer;
+  transition: all var(--transition);
+  text-decoration: none;
+}
+.btn-whatsapp:hover {
+  background: #1eb956;
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(37,211,102,0.35);
+}
 .form-submit {
   width: 100%;
-  margin-top: 8px;
+  margin-top: 0;
   padding: 13px !important;
   font-size: 0.9rem !important;
   justify-content: center;
+}
+@media (max-width: 580px) {
+  .form-actions-wrap { grid-template-columns: 1fr; }
 }
 .form-success {
   display: none;
@@ -1725,8 +2026,8 @@ h1, h2, h3, h4, h5 {
    ══════════════════════════════════════════════ */
 .back-to-top {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
+  bottom: 90px;
+  right: 26px;
   width: 44px;
   height: 44px;
   display: flex;
@@ -1757,25 +2058,53 @@ h1, h2, h3, h4, h5 {
 .whatsapp-float {
   position: fixed;
   bottom: 24px;
-  left: 24px;
-  width: 52px;
-  height: 52px;
+  right: 24px;
+  width: 54px;
+  height: 54px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #25d366;
   color: var(--white);
   border-radius: 50%;
-  z-index: 100;
-  box-shadow: 0 4px 16px rgba(37,211,102,0.3);
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.4);
   transition: all var(--transition);
+  text-decoration: none;
 }
 .whatsapp-float:hover {
   transform: scale(1.08);
-  box-shadow: 0 6px 24px rgba(37,211,102,0.4);
+  box-shadow: 0 8px 26px rgba(37,211,102,0.5);
   color: var(--white);
 }
 .whatsapp-float svg {
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
+}
+.whatsapp-tooltip {
+  position: absolute;
+  right: 66px;
+  background: var(--navy);
+  color: var(--white);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all var(--transition);
+  box-shadow: var(--shadow-md);
+}
+.whatsapp-float:hover .whatsapp-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+@media (max-width: 480px) {
+  .whatsapp-tooltip { display: none; }
+  .whatsapp-float { bottom: 18px; right: 18px; width: 48px; height: 48px; }
+  .whatsapp-float svg { width: 24px; height: 24px; }
+  .back-to-top { bottom: 76px; right: 20px; width: 40px; height: 40px; }
 }
