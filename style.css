@@ -663,6 +663,14 @@ h1, h2, h3, h4, h5 {
   z-index: 2;
   text-align: center;
   padding: 8px;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+.media-accent:hover {
+  background: var(--emerald-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  color: var(--white);
 }
 .media-accent .accent-number {
   font-family: 'Inter', sans-serif;
