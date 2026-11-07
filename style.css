@@ -402,7 +402,7 @@ h1, h2, h3, h4, h5 {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('image/udawalawe.jpg') no-repeat center 40%/cover;
+  background: url('image/hero_resort.jpg') no-repeat center/cover;
   z-index: 0;
   transform: scale(1.03);
   animation: heroZoom 12s ease-out forwards;
