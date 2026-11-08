@@ -609,6 +609,9 @@ h1, h2, h3, h4, h5 {
   overflow: hidden;
   transition: all var(--transition);
   box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .service-card:hover {
   box-shadow: var(--shadow-lg);
@@ -619,6 +622,7 @@ h1, h2, h3, h4, h5 {
   position: relative;
   height: 230px;
   overflow: hidden;
+  flex-shrink: 0;
 }
 .service-card-img img {
   width: 100%;
@@ -650,17 +654,24 @@ h1, h2, h3, h4, h5 {
 }
 .service-card-body {
   padding: 26px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .service-card-body h3 {
   font-size: 1.15rem;
   font-weight: 700;
   margin-bottom: 10px;
+  min-height: 2.8rem;
+  display: flex;
+  align-items: flex-start;
 }
 .service-card-body > p {
   color: var(--text-muted);
   font-size: 0.92rem;
   margin-bottom: 16px;
   line-height: 1.7;
+  min-height: 4.8rem;
 }
 .service-highlights {
   list-style: none;
@@ -668,6 +679,8 @@ h1, h2, h3, h4, h5 {
   flex-wrap: wrap;
   gap: 6px;
   margin-bottom: 20px;
+  min-height: 68px;
+  align-content: flex-start;
 }
 .service-highlights li {
   font-size: 0.78rem;
@@ -689,6 +702,7 @@ h1, h2, h3, h4, h5 {
   justify-content: center;
   padding: 11px;
   font-size: 0.85rem;
+  margin-top: auto;
 }
 
 @media (max-width: 992px) {
@@ -696,6 +710,11 @@ h1, h2, h3, h4, h5 {
 }
 @media (max-width: 600px) {
   .services-grid { grid-template-columns: 1fr; }
+  .service-card-body h3,
+  .service-card-body > p,
+  .service-highlights {
+    min-height: auto;
+  }
 }
 
 /* ══════════════════════════════════════════════
