@@ -9,7 +9,35 @@
   <meta property="og:title" content="Mayka's Holiday Homes & Safari Tours — Thanamalwila" />
   <meta property="og:description" content="Holiday home accommodation & guided wildlife safaris in Thanamalwila, Sri Lanka." />
   <meta property="og:type" content="website" />
-  <link rel="stylesheet" href="style.css?v=2.2" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: {
+        preflight: false,
+      },
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              emerald: '#1a7a5c',
+              'emerald-dark': '#14604a',
+              'emerald-light': '#229e77',
+              sand: '#c9a84c',
+              'sand-light': '#dfc278',
+              navy: '#0a192a',
+              'navy-dark': '#060e18',
+              'navy-light': '#132840',
+            }
+          },
+          fontFamily: {
+            serif: ['Merriweather', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css?v=3.0" />
 </head>
 <body>
 
@@ -52,24 +80,24 @@
         <h1>Mayka's Holiday Homes &amp; Guided Safari Tours</h1>
         <p class="hero-desc">Family-owned holiday home accommodation and private guided wildlife safaris to Yala National Park, Udawalawe National Park, and Lunugamwehera Reservoir.</p>
         <div class="hero-actions">
-          <a href="#services" class="btn btn-primary">
+          <a href="#services" class="btn btn-primary shadow-lg shadow-emerald-950/40 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
             Explore Safari Tours
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
-          <a href="#accommodation" class="btn btn-outline-white">
+          <a href="#accommodation" class="btn btn-outline-white backdrop-blur-sm hover:bg-white/10 hover:-translate-y-0.5 transition-all duration-300">
             View Accommodation
           </a>
         </div>
         <div class="hero-badges">
-          <div class="badge-item">
+          <div class="badge-item backdrop-blur-md bg-white/10 border border-white/15 px-4 py-2.5 rounded-xl shadow-md transition-all hover:bg-white/20">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
             <span>Thanamalwila, Monaragala District</span>
           </div>
-          <div class="badge-item">
+          <div class="badge-item backdrop-blur-md bg-white/10 border border-white/15 px-4 py-2.5 rounded-xl shadow-md transition-all hover:bg-white/20">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
             <span>Booking.com &amp; Tripadvisor Listed</span>
           </div>
-          <div class="badge-item">
+          <div class="badge-item backdrop-blur-md bg-white/10 border border-white/15 px-4 py-2.5 rounded-xl shadow-md transition-all hover:bg-white/20">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
             <span>Family-Owned &amp; Operated</span>
           </div>
@@ -89,10 +117,10 @@
 
       <div class="services-grid">
         <!-- Udawalawe -->
-        <article class="service-card reveal reveal-d1">
-          <div class="service-card-img">
+        <article class="service-card reveal reveal-d1 group rounded-2xl border border-slate-200/80 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+          <div class="service-card-img rounded-t-2xl">
             <img loading="lazy" src="image/udawalawe.jpg" alt="Wild elephant herds at Udawalawe National Park" />
-            <span class="duration-badge">
+            <span class="duration-badge backdrop-blur-md bg-slate-900/80 border border-white/20 shadow-sm">
               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
               3–4 Hours
             </span>
@@ -101,20 +129,20 @@
             <h3>Udawalawe National Park Safari</h3>
             <p>Witness large herds of wild Asian elephants roaming open grasslands, reservoir watering holes, and the Elephant Transit Home.</p>
             <ul class="service-highlights">
-              <li>Guaranteed Sightings</li>
-              <li>Private 4×4 Jeep</li>
-              <li>Elephant Transit Home</li>
-              <li>Morning or Sunset Safari</li>
+              <li class="bg-emerald-50 text-emerald-800 border border-emerald-200/70 hover:bg-emerald-100 transition-colors">Guaranteed Sightings</li>
+              <li class="bg-emerald-50 text-emerald-800 border border-emerald-200/70 hover:bg-emerald-100 transition-colors">Private 4×4 Jeep</li>
+              <li class="bg-emerald-50 text-emerald-800 border border-emerald-200/70 hover:bg-emerald-100 transition-colors">Elephant Transit Home</li>
+              <li class="bg-emerald-50 text-emerald-800 border border-emerald-200/70 hover:bg-emerald-100 transition-colors">Morning or Sunset Safari</li>
             </ul>
-            <a href="#contact" class="btn btn-primary">Book Udawalawe Safari</a>
+            <a href="#contact" class="btn btn-primary shadow-md hover:shadow-lg transition-all">Book Udawalawe Safari</a>
           </div>
         </article>
 
         <!-- Yala -->
-        <article class="service-card reveal reveal-d2">
-          <div class="service-card-img">
+        <article class="service-card reveal reveal-d2 group rounded-2xl border border-slate-200/80 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+          <div class="service-card-img rounded-t-2xl">
             <img loading="lazy" src="image/yala.jpg" alt="Leopard at Yala National Park" />
-            <span class="duration-badge">
+            <span class="duration-badge backdrop-blur-md bg-slate-900/80 border border-white/20 shadow-sm">
               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
               Half / Full Day
             </span>
@@ -123,20 +151,20 @@
             <h3>Yala National Park Safari</h3>
             <p>Track Sri Lankan leopards, sloth bears, elephants, and crocodiles on a private 4x4 safari through Yala National Park.</p>
             <ul class="service-highlights">
-              <li>Private 4×4 Jeep</li>
-              <li>Experienced Driver</li>
-              <li>Photography Stops</li>
-              <li>Water &amp; Snacks Included</li>
+              <li class="bg-emerald-50 text-emerald-800 border border-emerald-200/70 hover:bg-emerald-100 transition-colors">Private 4×4 Jeep</li>
+              <li class="bg-emerald-50 text-emerald-800 border border-emerald-200/70 hover:bg-emerald-100 transition-colors">Experienced Driver</li>
+              <li class="bg-emerald-50 text-emerald-800 border border-emerald-200/70 hover:bg-emerald-100 transition-colors">Photography Stops</li>
+              <li class="bg-emerald-50 text-emerald-800 border border-emerald-200/70 hover:bg-emerald-100 transition-colors">Water &amp; Snacks Included</li>
             </ul>
-            <a href="#contact" class="btn btn-primary">Book Yala Safari</a>
+            <a href="#contact" class="btn btn-primary shadow-md hover:shadow-lg transition-all">Book Yala Safari</a>
           </div>
         </article>
 
         <!-- Elephant -->
-        <article class="service-card reveal reveal-d3">
-          <div class="service-card-img">
+        <article class="service-card reveal reveal-d3 group rounded-2xl border border-slate-200/80 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+          <div class="service-card-img rounded-t-2xl">
             <img loading="lazy" src="image/elephant.jpg" alt="Elephant gathering at Lunugamwehera" />
-            <span class="duration-badge">
+            <span class="duration-badge backdrop-blur-md bg-slate-900/80 border border-white/20 shadow-sm">
               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
               4–5 Hours
             </span>
@@ -145,12 +173,12 @@
             <h3>Elephant Gathering — Lunugamwehera</h3>
             <p>Visit the Lunugamwehera reservoir and national park corridors to observe wild elephant herds near natural water sources.</p>
             <ul class="service-highlights">
-              <li>Afternoon Safari</li>
-              <li>Sunset Reservoir Views</li>
-              <li>Photography Guidance</li>
-              <li>Safety Gear Included</li>
+              <li class="bg-emerald-50 text-emerald-800 border border-emerald-200/70 hover:bg-emerald-100 transition-colors">Afternoon Safari</li>
+              <li class="bg-emerald-50 text-emerald-800 border border-emerald-200/70 hover:bg-emerald-100 transition-colors">Sunset Reservoir Views</li>
+              <li class="bg-emerald-50 text-emerald-800 border border-emerald-200/70 hover:bg-emerald-100 transition-colors">Photography Guidance</li>
+              <li class="bg-emerald-50 text-emerald-800 border border-emerald-200/70 hover:bg-emerald-100 transition-colors">Safety Gear Included</li>
             </ul>
-            <a href="#contact" class="btn btn-primary">Book Elephant Tour</a>
+            <a href="#contact" class="btn btn-primary shadow-md hover:shadow-lg transition-all">Book Elephant Tour</a>
           </div>
         </article>
       </div>
@@ -227,33 +255,33 @@
 
         <div class="rooms-grid">
           <!-- Room 1 -->
-          <article class="room-card">
-            <div class="room-card-img">
+          <article class="room-card group rounded-2xl border border-slate-200/80 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <div class="room-card-img rounded-t-2xl overflow-hidden">
               <img loading="lazy" src="image/room_deluxe.jpg" alt="Deluxe One-Bedroom Apartment with Garden View" />
             </div>
             <div class="room-card-body">
               <div class="room-card-top">
                 <h3>Deluxe One-Bedroom Apartment with Garden View</h3>
-                <span class="guest-capacity-badge">
+                <span class="guest-capacity-badge bg-slate-100 text-slate-700 font-semibold px-2.5 py-1 rounded-lg text-xs">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                   Up to 4 Guests
                 </span>
               </div>
-              <div class="room-bed-info">
+              <div class="room-bed-info text-emerald-700 font-semibold text-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M3 14h18M5 18h14M4 6h16a1 1 0 011 1v11H3V7a1 1 0 011-1z"/></svg>
                 <span>2 Large Double Beds</span>
               </div>
               <div class="room-pills">
-                <span class="room-pill">Garden View</span>
-                <span class="room-pill">Air Conditioning</span>
-                <span class="room-pill">Private Balcony</span>
-                <span class="room-pill">Private Entrance</span>
-                <span class="room-pill">En-suite Bathroom</span>
-                <span class="room-pill">Free Wi-Fi</span>
+                <span class="room-pill bg-slate-50 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full border border-slate-200/60">Garden View</span>
+                <span class="room-pill bg-slate-50 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full border border-slate-200/60">Air Conditioning</span>
+                <span class="room-pill bg-slate-50 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full border border-slate-200/60">Private Balcony</span>
+                <span class="room-pill bg-slate-50 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full border border-slate-200/60">Private Entrance</span>
+                <span class="room-pill bg-slate-50 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full border border-slate-200/60">En-suite Bathroom</span>
+                <span class="room-pill bg-slate-50 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full border border-slate-200/60">Free Wi-Fi</span>
               </div>
               <div class="room-card-footer">
                 <span class="room-provider">Booking.com Official Listing</span>
-                <a href="https://www.booking.com/hotel/lk/maykas-luxury-holiday-homes.en-gb.html?aid=356980&amp;label=gog235jc-10CAsohQFCG21heWthcy1sdXh1cnktaG9saWRheS1ob21lc0gzWANohQGIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4ArOnndcGwAIB0gIkYzdkZGFjNjktMDRjMi00NjdmLWE2YzctNThlODMwYjZmMGZm2AIB4AIB&amp;sid=f3aeadcbbd8856c1fab64354d2acccc2&amp;dist=0&amp;keep_landing=1&amp;sb_price_type=total&amp;type=total&amp;chal_t=1793545140112&amp;force_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank" rel="noreferrer" class="btn btn-primary">
+                <a href="https://www.booking.com/hotel/lk/maykas-luxury-holiday-homes.en-gb.html?aid=356980&amp;label=gog235jc-10CAsohQFCG21heWthcy1sdXh1cnktaG9saWRheS1ob21lc0gzWANohQGIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4ArOnndcGwAIB0gIkYzdkZGFjNjktMDRjMi00NjdmLWE2YzctNThlODMwYjZmMGZm2AIB4AIB&amp;sid=f3aeadcbbd8856c1fab64354d2acccc2&amp;dist=0&amp;keep_landing=1&amp;sb_price_type=total&amp;type=total&amp;chal_t=1793545140112&amp;force_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank" rel="noreferrer" class="btn btn-primary shadow-md hover:shadow-lg transition-all">
                   View Availability &rarr;
                 </a>
               </div>
@@ -261,33 +289,33 @@
           </article>
 
           <!-- Room 2 -->
-          <article class="room-card">
-            <div class="room-card-img">
+          <article class="room-card group rounded-2xl border border-slate-200/80 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <div class="room-card-img rounded-t-2xl overflow-hidden">
               <img loading="lazy" src="image/room_triple.jpg" alt="Triple Room with Balcony" />
             </div>
             <div class="room-card-body">
               <div class="room-card-top">
                 <h3>Triple Room with Balcony</h3>
-                <span class="guest-capacity-badge">
+                <span class="guest-capacity-badge bg-slate-100 text-slate-700 font-semibold px-2.5 py-1 rounded-lg text-xs">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                   Up to 3 Guests
                 </span>
               </div>
-              <div class="room-bed-info">
+              <div class="room-bed-info text-emerald-700 font-semibold text-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M3 14h18M5 18h14M4 6h16a1 1 0 011 1v11H3V7a1 1 0 011-1z"/></svg>
                 <span>1 Single Bed + 1 Large Double Bed</span>
               </div>
               <div class="room-pills">
-                <span class="room-pill">Private Balcony</span>
-                <span class="room-pill">Air Conditioning</span>
-                <span class="room-pill">Garden View</span>
-                <span class="room-pill">Private Bathroom</span>
-                <span class="room-pill">Flat-Screen TV</span>
-                <span class="room-pill">Free Wi-Fi</span>
+                <span class="room-pill bg-slate-50 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full border border-slate-200/60">Private Balcony</span>
+                <span class="room-pill bg-slate-50 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full border border-slate-200/60">Air Conditioning</span>
+                <span class="room-pill bg-slate-50 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full border border-slate-200/60">Garden View</span>
+                <span class="room-pill bg-slate-50 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full border border-slate-200/60">Private Bathroom</span>
+                <span class="room-pill bg-slate-50 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full border border-slate-200/60">Flat-Screen TV</span>
+                <span class="room-pill bg-slate-50 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full border border-slate-200/60">Free Wi-Fi</span>
               </div>
               <div class="room-card-footer">
                 <span class="room-provider">Booking.com Official Listing</span>
-                <a href="https://www.booking.com/hotel/lk/maykas-luxury-holiday-homes.en-gb.html?aid=356980&amp;label=gog235jc-10CAsohQFCG21heWthcy1sdXh1cnktaG9saWRheS1ob21lc0gzWANohQGIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4ArOnndcGwAIB0gIkYzdkZGFjNjktMDRjMi00NjdmLWE2YzctNThlODMwYjZmMGZm2AIB4AIB&amp;sid=f3aeadcbbd8856c1fab64354d2acccc2&amp;dist=0&amp;keep_landing=1&amp;sb_price_type=total&amp;type=total&amp;chal_t=1793545140112&amp;force_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank" rel="noreferrer" class="btn btn-primary">
+                <a href="https://www.booking.com/hotel/lk/maykas-luxury-holiday-homes.en-gb.html?aid=356980&amp;label=gog235jc-10CAsohQFCG21heWthcy1sdXh1cnktaG9saWRheS1ob21lc0gzWANohQGIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4ArOnndcGwAIB0gIkYzdkZGFjNjktMDRjMi00NjdmLWE2YzctNThlODMwYjZmMGZm2AIB4AIB&amp;sid=f3aeadcbbd8856c1fab64354d2acccc2&amp;dist=0&amp;keep_landing=1&amp;sb_price_type=total&amp;type=total&amp;chal_t=1793545140112&amp;force_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank" rel="noreferrer" class="btn btn-primary shadow-md hover:shadow-lg transition-all">
                   View Availability &rarr;
                 </a>
               </div>
@@ -295,33 +323,33 @@
           </article>
 
           <!-- Room 3 -->
-          <article class="room-card">
-            <div class="room-card-img">
+          <article class="room-card group rounded-2xl border border-slate-200/80 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <div class="room-card-img rounded-t-2xl overflow-hidden">
               <img loading="lazy" src="image/room_garden.jpg" alt="One-Bedroom Apartment with Garden" />
             </div>
             <div class="room-card-body">
               <div class="room-card-top">
                 <h3>One-Bedroom Apartment with Garden</h3>
-                <span class="guest-capacity-badge">
+                <span class="guest-capacity-badge bg-slate-100 text-slate-700 font-semibold px-2.5 py-1 rounded-lg text-xs">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                   Up to 4 Guests
                 </span>
               </div>
-              <div class="room-bed-info">
+              <div class="room-bed-info text-emerald-700 font-semibold text-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M3 14h18M5 18h14M4 6h16a1 1 0 011 1v11H3V7a1 1 0 011-1z"/></svg>
                 <span>2 Large Double Beds</span>
               </div>
               <div class="room-pills">
-                <span class="room-pill">Direct Garden Access</span>
-                <span class="room-pill">Air Conditioning</span>
-                <span class="room-pill">Private Terrace</span>
-                <span class="room-pill">Seating Area</span>
-                <span class="room-pill">Private Entrance</span>
-                <span class="room-pill">Free Wi-Fi</span>
+                <span class="room-pill bg-slate-50 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full border border-slate-200/60">Direct Garden Access</span>
+                <span class="room-pill bg-slate-50 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full border border-slate-200/60">Air Conditioning</span>
+                <span class="room-pill bg-slate-50 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full border border-slate-200/60">Private Terrace</span>
+                <span class="room-pill bg-slate-50 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full border border-slate-200/60">Seating Area</span>
+                <span class="room-pill bg-slate-50 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full border border-slate-200/60">Private Entrance</span>
+                <span class="room-pill bg-slate-50 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full border border-slate-200/60">Free Wi-Fi</span>
               </div>
               <div class="room-card-footer">
                 <span class="room-provider">Booking.com Official Listing</span>
-                <a href="https://www.booking.com/hotel/lk/maykas-luxury-holiday-homes.en-gb.html?aid=356980&amp;label=gog235jc-10CAsohQFCG21heWthcy1sdXh1cnktaG9saWRheS1ob21lc0gzWANohQGIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4ArOnndcGwAIB0gIkYzdkZGFjNjktMDRjMi00NjdmLWE2YzctNThlODMwYjZmMGZm2AIB4AIB&amp;sid=f3aeadcbbd8856c1fab64354d2acccc2&amp;dist=0&amp;keep_landing=1&amp;sb_price_type=total&amp;type=total&amp;chal_t=1793545140112&amp;force_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank" rel="noreferrer" class="btn btn-primary">
+                <a href="https://www.booking.com/hotel/lk/maykas-luxury-holiday-homes.en-gb.html?aid=356980&amp;label=gog235jc-10CAsohQFCG21heWthcy1sdXh1cnktaG9saWRheS1ob21lc0gzWANohQGIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4ArOnndcGwAIB0gIkYzdkZGFjNjktMDRjMi00NjdmLWE2YzctNThlODMwYjZmMGZm2AIB4AIB&amp;sid=f3aeadcbbd8856c1fab64354d2acccc2&amp;dist=0&amp;keep_landing=1&amp;sb_price_type=total&amp;type=total&amp;chal_t=1793545140112&amp;force_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank" rel="noreferrer" class="btn btn-primary shadow-md hover:shadow-lg transition-all">
                   View Availability &rarr;
                 </a>
               </div>
@@ -329,33 +357,33 @@
           </article>
 
           <!-- Room 4 -->
-          <article class="room-card">
-            <div class="room-card-img">
+          <article class="room-card group rounded-2xl border border-slate-200/80 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <div class="room-card-img rounded-t-2xl overflow-hidden">
               <img loading="lazy" src="image/room_apartment.jpg" alt="One-Bedroom Apartment with Garden View" />
             </div>
             <div class="room-card-body">
               <div class="room-card-top">
                 <h3>One-Bedroom Apartment with Garden View</h3>
-                <span class="guest-capacity-badge">
+                <span class="guest-capacity-badge bg-slate-100 text-slate-700 font-semibold px-2.5 py-1 rounded-lg text-xs">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                   Up to 4 Guests
                 </span>
               </div>
-              <div class="room-bed-info">
+              <div class="room-bed-info text-emerald-700 font-semibold text-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M3 14h18M5 18h14M4 6h16a1 1 0 011 1v11H3V7a1 1 0 011-1z"/></svg>
                 <span>2 Large Double Beds</span>
               </div>
               <div class="room-pills">
-                <span class="room-pill">Garden View</span>
-                <span class="room-pill">Air Conditioning</span>
-                <span class="room-pill">Balcony / Patio</span>
-                <span class="room-pill">Private Entrance</span>
-                <span class="room-pill">Quiet Location</span>
-                <span class="room-pill">Free Wi-Fi</span>
+                <span class="room-pill bg-slate-50 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full border border-slate-200/60">Garden View</span>
+                <span class="room-pill bg-slate-50 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full border border-slate-200/60">Air Conditioning</span>
+                <span class="room-pill bg-slate-50 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full border border-slate-200/60">Balcony / Patio</span>
+                <span class="room-pill bg-slate-50 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full border border-slate-200/60">Private Entrance</span>
+                <span class="room-pill bg-slate-50 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full border border-slate-200/60">Quiet Location</span>
+                <span class="room-pill bg-slate-50 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full border border-slate-200/60">Free Wi-Fi</span>
               </div>
               <div class="room-card-footer">
                 <span class="room-provider">Booking.com Official Listing</span>
-                <a href="https://www.booking.com/hotel/lk/maykas-luxury-holiday-homes.en-gb.html?aid=356980&amp;label=gog235jc-10CAsohQFCG21heWthcy1sdXh1cnktaG9saWRheS1ob21lc0gzWANohQGIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4ArOnndcGwAIB0gIkYzdkZGFjNjktMDRjMi00NjdmLWE2YzctNThlODMwYjZmMGZm2AIB4AIB&amp;sid=f3aeadcbbd8856c1fab64354d2acccc2&amp;dist=0&amp;keep_landing=1&amp;sb_price_type=total&amp;type=total&amp;chal_t=1793545140112&amp;force_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank" rel="noreferrer" class="btn btn-primary">
+                <a href="https://www.booking.com/hotel/lk/maykas-luxury-holiday-homes.en-gb.html?aid=356980&amp;label=gog235jc-10CAsohQFCG21heWthcy1sdXh1cnktaG9saWRheS1ob21lc0gzWANohQGIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4ArOnndcGwAIB0gIkYzdkZGFjNjktMDRjMi00NjdmLWE2YzctNThlODMwYjZmMGZm2AIB4AIB&amp;sid=f3aeadcbbd8856c1fab64354d2acccc2&amp;dist=0&amp;keep_landing=1&amp;sb_price_type=total&amp;type=total&amp;chal_t=1793545140112&amp;force_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank" rel="noreferrer" class="btn btn-primary shadow-md hover:shadow-lg transition-all">
                   View Availability &rarr;
                 </a>
               </div>
